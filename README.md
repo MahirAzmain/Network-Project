@@ -1,3 +1,4 @@
+# Description 
 The growth and evolution of the Internet of Things (IoT) is now of paramount importance for next-generation networks, including the upcoming 6G. 
 In particular, there is a set of constrained IoT nodes that comprise the Low-Power and Lossy Networks (LLNs), which have very particular requirements. 
 The current standard for routing in those networks is RPL, which was defined less than a decade ago and still needs improvements in terms of scalability or 
