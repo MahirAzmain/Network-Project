@@ -1,0 +1,278 @@
+version 3
+run MOP0-0-20251029-18:22:37-1968
+attr configname MOP0
+attr datetime 20251029-18:22:37
+attr datetimef 20251029-182237
+attr experiment MOP0
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network rpl.RPLNetwork
+attr processid 1968
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "RPL with MOP0 (Upward only)"
+config **.RPLUpwardRouting.mopType 0
+config network rpl.RPLNetwork
+config sim-time-limit 100s
+config repeat 1
+config **.cmdenv-log-level info
+config cmdenv-express-mode true
+config **.numNodes 7
+config **.RPLUpwardRouting.mopType 0
+config **.AppLayer.sendInterval 10s
+config **.AppLayer.dataPacketSize 100B
+config **.IdealPhy.transmissionRange 100m
+config **.IdealMac.transmissionDelay 0.001s
+config record-eventlog false
+config **.vector-recording true
+config **.scalar-recording true
+config **.node[*].rpl.**.result-recording-modes all
+config **.node[*].net.**.result-recording-modes all
+
+par RPLNetwork.node[0].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[0].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[0].phy packetsReceived 0
+scalar RPLNetwork.node[0].phy packetsSent 2
+par RPLNetwork.node[0].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[0].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[0].mac framesReceived 1
+scalar RPLNetwork.node[0].mac framesSent 2
+par RPLNetwork.node[0].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[0].net mopType 0
+scalar RPLNetwork.node[0].net packetsForwarded 0
+scalar RPLNetwork.node[0].net packetsDropped 0
+scalar RPLNetwork.node[0].net packetsReceived 1
+par RPLNetwork.node[0].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[0].rpl mopType 0
+scalar RPLNetwork.node[0].rpl dioSent 2
+scalar RPLNetwork.node[0].rpl dioReceived 0
+scalar RPLNetwork.node[0].rpl daoSent 0
+scalar RPLNetwork.node[0].rpl daoReceived 0
+scalar RPLNetwork.node[0].rpl parentTableSize 0
+scalar RPLNetwork.node[0].rpl routingTableSize 0
+scalar RPLNetwork.node[0].rpl finalRank 256
+par RPLNetwork.node[0].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[0].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[0].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[0].app packetsSent 0
+scalar RPLNetwork.node[0].app packetsReceived 0
+par RPLNetwork.node[0] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[0] nodeId 0
+par RPLNetwork.node[0] topology "\"grid\""
+par RPLNetwork.node[1].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[1].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[1].phy packetsReceived 0
+scalar RPLNetwork.node[1].phy packetsSent 0
+par RPLNetwork.node[1].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[1].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[1].mac framesReceived 2
+scalar RPLNetwork.node[1].mac framesSent 0
+par RPLNetwork.node[1].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[1].net mopType 0
+scalar RPLNetwork.node[1].net packetsForwarded 0
+scalar RPLNetwork.node[1].net packetsDropped 0
+scalar RPLNetwork.node[1].net packetsReceived 2
+par RPLNetwork.node[1].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[1].rpl mopType 0
+scalar RPLNetwork.node[1].rpl dioSent 0
+scalar RPLNetwork.node[1].rpl dioReceived 1
+scalar RPLNetwork.node[1].rpl daoSent 0
+scalar RPLNetwork.node[1].rpl daoReceived 0
+scalar RPLNetwork.node[1].rpl parentTableSize 1
+scalar RPLNetwork.node[1].rpl routingTableSize 1
+scalar RPLNetwork.node[1].rpl finalRank 512
+par RPLNetwork.node[1].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[1].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[1].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[1].app packetsSent 0
+scalar RPLNetwork.node[1].app packetsReceived 0
+par RPLNetwork.node[1] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[1] nodeId 1
+par RPLNetwork.node[1] topology "\"grid\""
+par RPLNetwork.node[2].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[2].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[2].phy packetsReceived 0
+scalar RPLNetwork.node[2].phy packetsSent 0
+par RPLNetwork.node[2].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[2].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[2].mac framesReceived 2
+scalar RPLNetwork.node[2].mac framesSent 0
+par RPLNetwork.node[2].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[2].net mopType 0
+scalar RPLNetwork.node[2].net packetsForwarded 0
+scalar RPLNetwork.node[2].net packetsDropped 0
+scalar RPLNetwork.node[2].net packetsReceived 2
+par RPLNetwork.node[2].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[2].rpl mopType 0
+scalar RPLNetwork.node[2].rpl dioSent 0
+scalar RPLNetwork.node[2].rpl dioReceived 1
+scalar RPLNetwork.node[2].rpl daoSent 0
+scalar RPLNetwork.node[2].rpl daoReceived 0
+scalar RPLNetwork.node[2].rpl parentTableSize 1
+scalar RPLNetwork.node[2].rpl routingTableSize 1
+scalar RPLNetwork.node[2].rpl finalRank 512
+par RPLNetwork.node[2].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[2].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[2].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[2].app packetsSent 0
+scalar RPLNetwork.node[2].app packetsReceived 0
+par RPLNetwork.node[2] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[2] nodeId 2
+par RPLNetwork.node[2] topology "\"grid\""
+par RPLNetwork.node[3].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[3].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[3].phy packetsReceived 0
+scalar RPLNetwork.node[3].phy packetsSent 0
+par RPLNetwork.node[3].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[3].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[3].mac framesReceived 2
+scalar RPLNetwork.node[3].mac framesSent 0
+par RPLNetwork.node[3].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[3].net mopType 0
+scalar RPLNetwork.node[3].net packetsForwarded 0
+scalar RPLNetwork.node[3].net packetsDropped 0
+scalar RPLNetwork.node[3].net packetsReceived 2
+par RPLNetwork.node[3].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[3].rpl mopType 0
+scalar RPLNetwork.node[3].rpl dioSent 0
+scalar RPLNetwork.node[3].rpl dioReceived 1
+scalar RPLNetwork.node[3].rpl daoSent 0
+scalar RPLNetwork.node[3].rpl daoReceived 0
+scalar RPLNetwork.node[3].rpl parentTableSize 1
+scalar RPLNetwork.node[3].rpl routingTableSize 1
+scalar RPLNetwork.node[3].rpl finalRank 512
+par RPLNetwork.node[3].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[3].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[3].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[3].app packetsSent 0
+scalar RPLNetwork.node[3].app packetsReceived 0
+par RPLNetwork.node[3] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[3] nodeId 3
+par RPLNetwork.node[3] topology "\"grid\""
+par RPLNetwork.node[4].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[4].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[4].phy packetsReceived 0
+scalar RPLNetwork.node[4].phy packetsSent 0
+par RPLNetwork.node[4].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[4].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[4].mac framesReceived 2
+scalar RPLNetwork.node[4].mac framesSent 0
+par RPLNetwork.node[4].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[4].net mopType 0
+scalar RPLNetwork.node[4].net packetsForwarded 0
+scalar RPLNetwork.node[4].net packetsDropped 0
+scalar RPLNetwork.node[4].net packetsReceived 2
+par RPLNetwork.node[4].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[4].rpl mopType 0
+scalar RPLNetwork.node[4].rpl dioSent 0
+scalar RPLNetwork.node[4].rpl dioReceived 1
+scalar RPLNetwork.node[4].rpl daoSent 0
+scalar RPLNetwork.node[4].rpl daoReceived 0
+scalar RPLNetwork.node[4].rpl parentTableSize 1
+scalar RPLNetwork.node[4].rpl routingTableSize 1
+scalar RPLNetwork.node[4].rpl finalRank 512
+par RPLNetwork.node[4].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[4].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[4].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[4].app packetsSent 0
+scalar RPLNetwork.node[4].app packetsReceived 0
+par RPLNetwork.node[4] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[4] nodeId 4
+par RPLNetwork.node[4] topology "\"grid\""
+par RPLNetwork.node[5].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[5].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[5].phy packetsReceived 0
+scalar RPLNetwork.node[5].phy packetsSent 1
+par RPLNetwork.node[5].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[5].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[5].mac framesReceived 1
+scalar RPLNetwork.node[5].mac framesSent 1
+par RPLNetwork.node[5].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[5].net mopType 0
+scalar RPLNetwork.node[5].net packetsForwarded 0
+scalar RPLNetwork.node[5].net packetsDropped 0
+scalar RPLNetwork.node[5].net packetsReceived 1
+par RPLNetwork.node[5].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[5].rpl mopType 0
+scalar RPLNetwork.node[5].rpl dioSent 0
+scalar RPLNetwork.node[5].rpl dioReceived 1
+scalar RPLNetwork.node[5].rpl daoSent 0
+scalar RPLNetwork.node[5].rpl daoReceived 0
+scalar RPLNetwork.node[5].rpl parentTableSize 1
+scalar RPLNetwork.node[5].rpl routingTableSize 1
+scalar RPLNetwork.node[5].rpl finalRank 512
+par RPLNetwork.node[5].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[5].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[5].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[5].app packetsSent 0
+scalar RPLNetwork.node[5].app packetsReceived 0
+par RPLNetwork.node[5] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[5] nodeId 5
+par RPLNetwork.node[5] topology "\"grid\""
+par RPLNetwork.node[6].phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.node[6].phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.node[6].phy packetsReceived 0
+scalar RPLNetwork.node[6].phy packetsSent 0
+par RPLNetwork.node[6].mac typename "\"rpl.IdealMac\""
+par RPLNetwork.node[6].mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.node[6].mac framesReceived 2
+scalar RPLNetwork.node[6].mac framesSent 0
+par RPLNetwork.node[6].net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.node[6].net mopType 0
+scalar RPLNetwork.node[6].net packetsForwarded 0
+scalar RPLNetwork.node[6].net packetsDropped 0
+scalar RPLNetwork.node[6].net packetsReceived 2
+par RPLNetwork.node[6].rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.node[6].rpl mopType 0
+scalar RPLNetwork.node[6].rpl dioSent 0
+scalar RPLNetwork.node[6].rpl dioReceived 1
+scalar RPLNetwork.node[6].rpl daoSent 0
+scalar RPLNetwork.node[6].rpl daoReceived 0
+scalar RPLNetwork.node[6].rpl parentTableSize 1
+scalar RPLNetwork.node[6].rpl routingTableSize 1
+scalar RPLNetwork.node[6].rpl finalRank 512
+par RPLNetwork.node[6].app typename "\"rpl.AppLayer\""
+par RPLNetwork.node[6].app sendInterval 10s
+attr unit s
+par RPLNetwork.node[6].app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.node[6].app packetsSent 0
+scalar RPLNetwork.node[6].app packetsReceived 0
+par RPLNetwork.node[6] typename "\"rpl.RPLNode\""
+par RPLNetwork.node[6] nodeId 6
+par RPLNetwork.node[6] topology "\"grid\""
+par RPLNetwork typename "\"rpl.RPLNetwork\""
+par RPLNetwork numNodes 7
+

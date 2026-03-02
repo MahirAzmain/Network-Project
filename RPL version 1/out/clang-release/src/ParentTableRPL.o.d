@@ -1,0 +1,6 @@
+../out/clang-release/src/ParentTableRPL.o: ParentTableRPL.cc \
+  ParentTableRPL.h RPLCommon.h \
+  D:/Installs/omnetpp-6.2.0/include/omnetpp.h
+ParentTableRPL.h:
+RPLCommon.h:
+D:/Installs/omnetpp-6.2.0/include/omnetpp.h:

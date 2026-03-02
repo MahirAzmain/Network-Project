@@ -1,0 +1,369 @@
+version 3
+run MOP1-0-20251030-09:09:21-68582
+attr configname MOP1
+attr datetime 20251030-09:09:21
+attr datetimef 20251030-090921
+attr experiment MOP1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network rpl.RPLNetwork
+attr processid 68582
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config description "RPL with MOP1 (Non-Storing)"
+config **.RPLUpwardRouting.mopType 1
+config network rpl.RPLNetwork
+config sim-time-limit 100s
+config repeat 1
+config **.cmdenv-log-level info
+config cmdenv-express-mode true
+config **.numNodes 7
+config **.RPLUpwardRouting.mopType 0
+config **.AppLayer.sendInterval 10s
+config **.AppLayer.dataPacketSize 100B
+config **.IdealPhy.transmissionRange 100m
+config **.IdealMac.transmissionDelay 0.001s
+config record-eventlog false
+config **.vector-recording true
+config **.scalar-recording true
+config **.node[*].rpl.**.result-recording-modes all
+config **.node[*].net.**.result-recording-modes all
+
+par RPLNetwork.root.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.root.app typename "\"rpl.AppLayer\""
+par RPLNetwork.root.app sendInterval 10s
+attr unit s
+par RPLNetwork.root.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.root.app packetsSent 0
+scalar RPLNetwork.root.app packetsReceived 0
+par RPLNetwork.root.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.root.net mopType 0
+scalar RPLNetwork.root.net packetsForwarded 0
+scalar RPLNetwork.root.net packetsDropped 0
+scalar RPLNetwork.root.net packetsReceived 4
+par RPLNetwork.root.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.root.nd sendInterval 5s
+attr unit s
+par RPLNetwork.root.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.root.rpl mopType 0
+scalar RPLNetwork.root.rpl dioSent 2
+scalar RPLNetwork.root.rpl dioReceived 3
+scalar RPLNetwork.root.rpl daoSent 0
+scalar RPLNetwork.root.rpl daoReceived 0
+scalar RPLNetwork.root.rpl parentTableSize 0
+scalar RPLNetwork.root.rpl routingTableSize 0
+scalar RPLNetwork.root.rpl finalRank 256
+par RPLNetwork.root.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.root.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.root.mac framesReceived 4
+scalar RPLNetwork.root.mac framesSent 2
+par RPLNetwork.root.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.root.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.root.phy packetsReceived 0
+scalar RPLNetwork.root.phy packetsSent 2
+par RPLNetwork.root typename "\"rpl.RPLNode\""
+par RPLNetwork.root nodeId 0
+par RPLNetwork.root isRoot true
+par RPLNetwork.laptop1.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop1.app typename "\"rpl.AppLayer\""
+par RPLNetwork.laptop1.app sendInterval 10s
+attr unit s
+par RPLNetwork.laptop1.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.laptop1.app packetsSent 0
+scalar RPLNetwork.laptop1.app packetsReceived 0
+par RPLNetwork.laptop1.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.laptop1.net mopType 0
+scalar RPLNetwork.laptop1.net packetsForwarded 0
+scalar RPLNetwork.laptop1.net packetsDropped 0
+scalar RPLNetwork.laptop1.net packetsReceived 6
+par RPLNetwork.laptop1.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.laptop1.nd sendInterval 5s
+attr unit s
+par RPLNetwork.laptop1.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.laptop1.rpl mopType 0
+scalar RPLNetwork.laptop1.rpl dioSent 1
+scalar RPLNetwork.laptop1.rpl dioReceived 5
+scalar RPLNetwork.laptop1.rpl daoSent 0
+scalar RPLNetwork.laptop1.rpl daoReceived 0
+scalar RPLNetwork.laptop1.rpl parentTableSize 1
+scalar RPLNetwork.laptop1.rpl routingTableSize 1
+scalar RPLNetwork.laptop1.rpl finalRank 512
+par RPLNetwork.laptop1.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.laptop1.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.laptop1.mac framesReceived 6
+scalar RPLNetwork.laptop1.mac framesSent 1
+par RPLNetwork.laptop1.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.laptop1.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.laptop1.phy packetsReceived 0
+scalar RPLNetwork.laptop1.phy packetsSent 1
+par RPLNetwork.laptop1 typename "\"rpl.RPLNode\""
+par RPLNetwork.laptop1 nodeId 1
+par RPLNetwork.laptop1 isRoot false
+par RPLNetwork.desktop1.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop1.app typename "\"rpl.AppLayer\""
+par RPLNetwork.desktop1.app sendInterval 10s
+attr unit s
+par RPLNetwork.desktop1.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.desktop1.app packetsSent 0
+scalar RPLNetwork.desktop1.app packetsReceived 0
+par RPLNetwork.desktop1.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.desktop1.net mopType 0
+scalar RPLNetwork.desktop1.net packetsForwarded 0
+scalar RPLNetwork.desktop1.net packetsDropped 0
+scalar RPLNetwork.desktop1.net packetsReceived 5
+par RPLNetwork.desktop1.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.desktop1.nd sendInterval 5s
+attr unit s
+par RPLNetwork.desktop1.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.desktop1.rpl mopType 0
+scalar RPLNetwork.desktop1.rpl dioSent 1
+scalar RPLNetwork.desktop1.rpl dioReceived 4
+scalar RPLNetwork.desktop1.rpl daoSent 0
+scalar RPLNetwork.desktop1.rpl daoReceived 0
+scalar RPLNetwork.desktop1.rpl parentTableSize 1
+scalar RPLNetwork.desktop1.rpl routingTableSize 1
+scalar RPLNetwork.desktop1.rpl finalRank 512
+par RPLNetwork.desktop1.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.desktop1.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.desktop1.mac framesReceived 5
+scalar RPLNetwork.desktop1.mac framesSent 1
+par RPLNetwork.desktop1.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.desktop1.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.desktop1.phy packetsReceived 0
+scalar RPLNetwork.desktop1.phy packetsSent 1
+par RPLNetwork.desktop1 typename "\"rpl.RPLNode\""
+par RPLNetwork.desktop1 nodeId 2
+par RPLNetwork.desktop1 isRoot false
+par RPLNetwork.phone1.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone1.app typename "\"rpl.AppLayer\""
+par RPLNetwork.phone1.app sendInterval 10s
+attr unit s
+par RPLNetwork.phone1.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.phone1.app packetsSent 0
+scalar RPLNetwork.phone1.app packetsReceived 0
+par RPLNetwork.phone1.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.phone1.net mopType 0
+scalar RPLNetwork.phone1.net packetsForwarded 0
+scalar RPLNetwork.phone1.net packetsDropped 0
+scalar RPLNetwork.phone1.net packetsReceived 6
+par RPLNetwork.phone1.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.phone1.nd sendInterval 5s
+attr unit s
+par RPLNetwork.phone1.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.phone1.rpl mopType 0
+scalar RPLNetwork.phone1.rpl dioSent 0
+scalar RPLNetwork.phone1.rpl dioReceived 5
+scalar RPLNetwork.phone1.rpl daoSent 0
+scalar RPLNetwork.phone1.rpl daoReceived 0
+scalar RPLNetwork.phone1.rpl parentTableSize 1
+scalar RPLNetwork.phone1.rpl routingTableSize 1
+scalar RPLNetwork.phone1.rpl finalRank 512
+par RPLNetwork.phone1.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.phone1.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.phone1.mac framesReceived 6
+scalar RPLNetwork.phone1.mac framesSent 0
+par RPLNetwork.phone1.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.phone1.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.phone1.phy packetsReceived 0
+scalar RPLNetwork.phone1.phy packetsSent 0
+par RPLNetwork.phone1 typename "\"rpl.RPLNode\""
+par RPLNetwork.phone1 nodeId 3
+par RPLNetwork.phone1 isRoot false
+par RPLNetwork.laptop2.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.laptop2.app typename "\"rpl.AppLayer\""
+par RPLNetwork.laptop2.app sendInterval 10s
+attr unit s
+par RPLNetwork.laptop2.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.laptop2.app packetsSent 0
+scalar RPLNetwork.laptop2.app packetsReceived 0
+par RPLNetwork.laptop2.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.laptop2.net mopType 0
+scalar RPLNetwork.laptop2.net packetsForwarded 0
+scalar RPLNetwork.laptop2.net packetsDropped 0
+scalar RPLNetwork.laptop2.net packetsReceived 5
+par RPLNetwork.laptop2.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.laptop2.nd sendInterval 5s
+attr unit s
+par RPLNetwork.laptop2.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.laptop2.rpl mopType 0
+scalar RPLNetwork.laptop2.rpl dioSent 1
+scalar RPLNetwork.laptop2.rpl dioReceived 4
+scalar RPLNetwork.laptop2.rpl daoSent 0
+scalar RPLNetwork.laptop2.rpl daoReceived 0
+scalar RPLNetwork.laptop2.rpl parentTableSize 1
+scalar RPLNetwork.laptop2.rpl routingTableSize 1
+scalar RPLNetwork.laptop2.rpl finalRank 512
+par RPLNetwork.laptop2.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.laptop2.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.laptop2.mac framesReceived 5
+scalar RPLNetwork.laptop2.mac framesSent 1
+par RPLNetwork.laptop2.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.laptop2.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.laptop2.phy packetsReceived 0
+scalar RPLNetwork.laptop2.phy packetsSent 1
+par RPLNetwork.laptop2 typename "\"rpl.RPLNode\""
+par RPLNetwork.laptop2 nodeId 4
+par RPLNetwork.laptop2 isRoot false
+par RPLNetwork.desktop2.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.desktop2.app typename "\"rpl.AppLayer\""
+par RPLNetwork.desktop2.app sendInterval 10s
+attr unit s
+par RPLNetwork.desktop2.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.desktop2.app packetsSent 0
+scalar RPLNetwork.desktop2.app packetsReceived 0
+par RPLNetwork.desktop2.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.desktop2.net mopType 0
+scalar RPLNetwork.desktop2.net packetsForwarded 0
+scalar RPLNetwork.desktop2.net packetsDropped 0
+scalar RPLNetwork.desktop2.net packetsReceived 6
+par RPLNetwork.desktop2.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.desktop2.nd sendInterval 5s
+attr unit s
+par RPLNetwork.desktop2.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.desktop2.rpl mopType 0
+scalar RPLNetwork.desktop2.rpl dioSent 0
+scalar RPLNetwork.desktop2.rpl dioReceived 5
+scalar RPLNetwork.desktop2.rpl daoSent 0
+scalar RPLNetwork.desktop2.rpl daoReceived 0
+scalar RPLNetwork.desktop2.rpl parentTableSize 1
+scalar RPLNetwork.desktop2.rpl routingTableSize 1
+scalar RPLNetwork.desktop2.rpl finalRank 512
+par RPLNetwork.desktop2.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.desktop2.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.desktop2.mac framesReceived 6
+scalar RPLNetwork.desktop2.mac framesSent 0
+par RPLNetwork.desktop2.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.desktop2.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.desktop2.phy packetsReceived 0
+scalar RPLNetwork.desktop2.phy packetsSent 0
+par RPLNetwork.desktop2 typename "\"rpl.RPLNode\""
+par RPLNetwork.desktop2 nodeId 5
+par RPLNetwork.desktop2 isRoot false
+par RPLNetwork.phone2.app.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.net.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.net.ndOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.nd.networkOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.net.lowerLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.mac.upperLayerOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.net.rplOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.rpl.netOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.mac.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.phy.radioOut.channel typename "\"ned.IdealChannel\""
+par RPLNetwork.phone2.app typename "\"rpl.AppLayer\""
+par RPLNetwork.phone2.app sendInterval 10s
+attr unit s
+par RPLNetwork.phone2.app dataPacketSize 100B
+attr unit B
+scalar RPLNetwork.phone2.app packetsSent 0
+scalar RPLNetwork.phone2.app packetsReceived 0
+par RPLNetwork.phone2.net typename "\"rpl.RPLNetworkLayer\""
+par RPLNetwork.phone2.net mopType 0
+scalar RPLNetwork.phone2.net packetsForwarded 0
+scalar RPLNetwork.phone2.net packetsDropped 0
+scalar RPLNetwork.phone2.net packetsReceived 4
+par RPLNetwork.phone2.nd typename "\"rpl.IPv6NeighbourDiscovery\""
+par RPLNetwork.phone2.nd sendInterval 5s
+attr unit s
+par RPLNetwork.phone2.rpl typename "\"rpl.RPLUpwardRouting\""
+par RPLNetwork.phone2.rpl mopType 0
+scalar RPLNetwork.phone2.rpl dioSent 1
+scalar RPLNetwork.phone2.rpl dioReceived 4
+scalar RPLNetwork.phone2.rpl daoSent 0
+scalar RPLNetwork.phone2.rpl daoReceived 0
+scalar RPLNetwork.phone2.rpl parentTableSize 1
+scalar RPLNetwork.phone2.rpl routingTableSize 1
+scalar RPLNetwork.phone2.rpl finalRank 512
+par RPLNetwork.phone2.mac typename "\"rpl.IdealMac\""
+par RPLNetwork.phone2.mac transmissionDelay 0.001s
+attr unit s
+scalar RPLNetwork.phone2.mac framesReceived 4
+scalar RPLNetwork.phone2.mac framesSent 2
+par RPLNetwork.phone2.phy typename "\"rpl.IdealPhy\""
+par RPLNetwork.phone2.phy transmissionRange 100m
+attr unit m
+scalar RPLNetwork.phone2.phy packetsReceived 0
+scalar RPLNetwork.phone2.phy packetsSent 2
+par RPLNetwork.phone2 typename "\"rpl.RPLNode\""
+par RPLNetwork.phone2 nodeId 6
+par RPLNetwork.phone2 isRoot false
+par RPLNetwork typename "\"rpl.RPLNetwork\""
+par RPLNetwork numNodes 7
+
